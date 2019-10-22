@@ -1,0 +1,27 @@
+#任务1
+def foo(a, b, *c, d, e, **f):
+    print(a, b, c, d, e, f, sep='\n')
+
+foo(1,2,3,4,5,d=6,e=7,f=8,g=9)
+
+#任务2
+alphabet = [chr(i) for i in range(97,123)]
+print(alphabet[1:11:2])
+
+student_basic_info = [
+    (1, "6662118001", "张三"),
+    (2, "6662118002", "李四"),
+    (3, "6662118051", "王五"),
+    (4, "6662118052", "赵六")
+]
+
+#任务3
+student_class_info = [
+    ("6662118001", "计算机201班"),
+    ("6662118002", "计算机202班"),
+    ("6662118051", "计算机202班"),
+    ("6662118052", "计算机203班")
+]
+L=[i+j[1:] for i in student_basic_info for j in student_class_info if i[1]==j[0]]
+for info in L:
+    print(info)
