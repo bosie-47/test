@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<style type="text/css">
+		.container{
+			display: flex;
+			width: 800px;
+			background-color: #BFBFBF;
+		}
+		.inline_box{
+			display: flex;
+			margin: 20px;
+			padding: 10px;
+			width:90px;
+			height:120px;
+			background-color: white;
+		}
+		#d1{
+			justify-content: center;
+			align-items: center;
+		}
+		#d2-1{
+			display: flex;
+			border:4px solid black;
+		}
+		#d2-2{
+			align-self: center;
+			border:4px solid red;
+		}
+		#d2-3{
+			align-self: flex-end;
+			border:4px solid green;
+		}
+		.box3{
+			display:flex;
+			flex-wrap:wrap;
+			align-content: space-between;
+		}
+		.box4{
+  			display: flex;
+			justify-content: center;
+  			flex-wrap: wrap;
+		}
+		.circle1{
+			border:7px solid green;
+			width:60px;
+			height:60px;
+			border-radius:50%;
+		}
+		.circle2{
+			width:30px;
+			height:30px;
+			border-radius: 50%;
+		}
+		.circle3-1{
+			border:4px solid red;
+			width:25px;
+			height:25px;
+			border-radius:50%;
+		}
+		.circle3-2{
+			border:4px solid black;
+			width:25px;
+			height:25px;
+			border-radius:50%;
+		}		
+		.circle3-3{
+			border:4px solid green;
+			width:25px;
+			height:25px;
+			border-radius:50%;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div id="d1" class="inline_box">
+			<div class="circle1"></div>
+		</div>
+		<div class="inline_box">
+			<span class="circle2" id="d2-1">
+			</span>
+			<span id="d2-2" class="circle2">
+			</span>
+			<span id="d2-3" class="circle2">
+			</span>
+		</div>
+		<div class="inline_box">
+			<div class="box3">
+				<div class="circle3-3">
+				</div>
+				<div class="circle3-2">
+				</div>
+			</div>
+			<div class="circle3-1" style="align-self: center"></div>
+			<div class="box3">
+				<div class="circle3-2"></div>
+				<div class="circle3-3"></div>
+			</div>
+		</div>
+		<div class="inline_box">
+			<div class="box4">
+				<div class="circle3-3"></div>
+				<div class="circle3-3"></div>
+				<div class="circle3-1"></div>
+				<div class="circle3-1"></div>
+				<div class="circle3-1"></div>
+				<div class="circle3-1"></div>
+			</div>
+		</div>
+		<div class="inline_box"style="flex-direction: column">
+			<div class="circle3-3"></div>
+			<div class="circle3-3" style="align-self: center;padding:0px"></div>
+			<div class="circle3-3" style="align-self: flex-end"></div>
+			<div class="box4">
+				<div class="circle3-1"></div>
+				<div class="circle3-1"></div>
+				<div class="circle3-1"></div>
+				<div class="circle3-1"></div>
+			</div>
+	</div>
+</body>
+</html>
